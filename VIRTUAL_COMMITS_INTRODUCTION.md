@@ -56,9 +56,10 @@ This is a list regarding almost all of those labels which start and end like thi
 - `[CHANGE-PORT]`: Change ports where the software is listening for incoming connections. Production and testnet.
 - `[CONFIRMATIONS-NUMBER]`: Number of confirmations when the coin considers that a transaction is finally a valid transaction.
 - `[SPECIFIC]`: Specific to the current repo fork that we are studying.
-- `[NEWANDCOMMENT]`: New content that it's worth a comment.
+- `[NEWANDCOMMENT]`: New comment added to the code.
 - `[PCHMESSAGESTART]`: Regarding PCH Message start.
 - `[ADAPT]`: **Useful for understanding what Magi project is about.**
+- `[SPACE]`: Added or remove either an space, several spaces or an emtpy line.
 
 ## Virtual commit message example
 
