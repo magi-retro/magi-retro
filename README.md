@@ -1,9 +1,8 @@
-# magi-retro
-Magi Retro project
+# Magi-Retro
 
-## About
+## About Magi-Retro
 
-magi-retro project original objective is to recreate the history of [Magi coin actual repo](https://github.com/magi-dev/magi) but coming from its actual older repo which seems to be [peercoin](https://github.com/magi-retro/peercoin).
+**Magi-Retro project** original objective is to recreate the history of [Magi coin actual repo](https://github.com/magi-dev/magi) but coming from its actual older repo which seems to be [peercoin](https://github.com/magi-retro/peercoin).
 
 You can find the final [reconstructed magi repo as peercoin here](https://github.com/magi-retro/peercoin).
 
