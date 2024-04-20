@@ -61,25 +61,25 @@ You could actually exchange or swap those old Magiccoin coins to Magi coins.
 
 You can find where a project was forked from if you checked all of the files where a port should have been changed. This was an example that compared whitecoin and zebrains-x11coin:
 
-    - doc/README:                15814.(default) 23489(default)
-    - doc/README_windows.txt:    15814(default) 23489(default)
-    - src/bitcoinrpc.cpp:        24071(rpc-testnet):15815(rpc-default) 22347(rpc-testnet):32347(rpc-default)
-    - src/init.cpp:              15814(default)!24070(testnet) 32348(default)!22347(testnet)
-    - src/init.cpp:              15815(rpc-default)!24071(rpc-testnet) 32347(rpc-default)!22347(rpc-testnet)
-    - src/protocol.h:            24070(testnet)!15814(default) 22347(testnet)!32348(default)
-    - src/qt/bitcoinstrings.cpp: 15814(default)!22788(testnet) 23489(default)!22788(testnet)
+- doc/README:                15814.(default) 23489(default)
+- doc/README_windows.txt:    15814(default) 23489(default)
+- src/bitcoinrpc.cpp:        24071(rpc-testnet):15815(rpc-default) 22347(rpc-testnet):32347(rpc-default)
+- src/init.cpp:              15814(default)!24070(testnet) 32348(default)!22347(testnet)
+- src/init.cpp:              15815(rpc-default)!24071(rpc-testnet) 32347(rpc-default)!22347(rpc-testnet)
+- src/protocol.h:            24070(testnet)!15814(default) 22347(testnet)!32348(default)
+- src/qt/bitcoinstrings.cpp: 15814(default)!22788(testnet) 23489(default)!22788(testnet)
 
 Summary:
 
-    - WhiteCoin non-rpc default port should be: 15814
-    - WhiteCoin non-rpc testnet port should be: 24070
-    - WhiteCoin     rpc default port should be: 15815
-    - WhiteCoin     rpc testnet port should be: 24071
+- WhiteCoin non-rpc default port should be: 15814
+- WhiteCoin non-rpc testnet port should be: 24070
+- WhiteCoin     rpc default port should be: 15815
+- WhiteCoin     rpc testnet port should be: 24071
 
 Conclusion:
 
-    - Leftover from WhiteCoin (which comes from Mintcoin) is: 22788 (probably non-rpc) testnet port.
-    - Leftover from an intermediate fork previous to zebrains-x11coin: 23489 .
+- Leftover from WhiteCoin (which comes from Mintcoin) is: 22788 (probably non-rpc) testnet port.
+- Leftover from an intermediate fork previous to zebrains-x11coin: 23489 .
 
 In the end we found out that **23489 port** was Badgercoin which was another fork which we were missing.
 
