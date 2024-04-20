@@ -50,6 +50,11 @@ You could actually exchange or swap those old Magiccoin coins to Magi coins.
 
 ## Random rambles about the project
 
+## About virtual commits
+
+**Note: You are highly advised to read this Virtual commits introduction in order to read this git repo history.**
+
+- [VIRTUAL_COMMITS_INTRODUCTION.md](VIRTUAL_COMMITS_INTRODUCTION.md)
 
 ## How to create virtual commits
 
