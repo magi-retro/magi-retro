@@ -43,5 +43,10 @@ You could actually exchange or swap those old Magiccoin coins to Magi coins.
 - [Whitecoin](https://github.com/magi-retro/peercoin/commits/MANUAL-FORK-GHOSTCOIN-WHITECOIN/) was based on Ghostcoin 1.0.2.
 - [BadgerCoin](https://github.com/magi-retro/peercoin/commits/MANUAL-FORK-WHITECOIN-BADGERCOIN/) was based on Whitecoin 1.0.1.
 - [zebrains-x11coin](https://github.com/magi-retro/peercoin/commits/MANUAL-FORK-BADGERCOIN-ZEBRAINSX11/) was based on BadgerCoin 0.9.1.2.
+- [atcsecure-x11coin](https://github.com/magi-retro/peercoin/commits/MANUAL-FORK-ZEBRAINSX11-ATCSECUREX11/) was based on zebrains-x11coin 0.9.1.4.
+- [Magicoin - First commit](https://github.com/magi-retro/peercoin/commits/MANUAL-FORK-X11COIN-MAGIv2/) was based on:
+    - atcsecure-x11coin 0.9.1.33. (What this repo uses)
+    - Probably some Bitcoin version from around 2014 09 15 which it is the first official Magi repo commit date.
+- [Magicoin - Snapshot from 2021 02 14](https://github.com/magi-retro/peercoin/commits/MAGI-2021-02-14/) was based on its **Magicoin - First commit** as it is obvious.
 
 **TODO**
