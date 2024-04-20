@@ -14,7 +14,7 @@ You can find the final [reconstructed magi repo as peercoin here](https://github
 ## What you can learn from this project
 
 - How to create virtual commits
-- How to pull all of the commits together
+- How to put all of the commits together
 - Some Magi history
 
 ## Magi history
@@ -48,4 +48,13 @@ You could actually exchange or swap those old Magiccoin coins to Magi coins.
     - Probably some Bitcoin version from around 2014 09 15 which it is the first official Magi repo commit date.
 - [Magicoin - Snapshot from 2021 02 14](https://github.com/magi-retro/peercoin/commits/MAGI-2021-02-14/) was based on its **Magicoin - First commit** as it is obvious.
 
-**TODO**
+## Random rambles about the project
+
+
+## How to create virtual commits
+
+- [VIRTUAL_COMMITS_CREATION.md](VIRTUAL_COMMITS_CREATION.md)
+
+## How to put all of the commits together
+
+- [VIRTUAL_COMMITS_FINAL_SQUASH.md](VIRTUAL_COMMITS_FINAL_SQUASH.md)
