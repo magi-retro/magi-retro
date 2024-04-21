@@ -118,6 +118,54 @@ In the end we found out that **23489 port** was Badgercoin which was another for
 
 - [VIRTUAL_COMMITS_FINAL_SQUASH.md](VIRTUAL_COMMITS_FINAL_SQUASH.md)
 
+## Advice on resuming Magi development
+
+### Introduction
+
+Many people that have Magi coins from mining back in 2014 want the coin to be resumed in a more recent codebase.
+Also, many people, just for fun want to learn how to improve Magi.
+For all of you here there are some thoughts about how to push the Magi development forward.
+
+### Misc notes
+
+- The best approach would be to use peercoin as a base and then add the ProofOfWork stuff that has in additional Magi.
+- You need to make a coin that does not need [checkpoints](https://github.com/magi-retro/peercoin/blob/MAGI-2021-02-14/src/checkpoints.cpp#L28-L55). Otherwise we are at the mercy of the private key of the coin creator.
+- So,... before removing checkpoints it might be wise to replace the [public master key](https://github.com/magi-retro/peercoin/blob/MAGI-2021-02-14/src/checkpoints.cpp#L400) that creates the different checkpoints and use another one of your own so that you can say that you actually control the coin. This will probably need a fork (So double the coins and so on).
+
+### About removing PoS or PoW
+
+- At a time I thought that it was a good idea to remove either the PoW or the PoS part of Magi coin. Having both a PoW and PoS system at the same time it's very great but it comes with a cost regarding how easy it's the coin to maintain. You need to check the PoW ancestors and also the PoS ancestors and see how they are upgrading their codebases. If you only use either PoW or PoS it should easier. So just think about it.
+
+### About exchanges
+
+- What exchanges actually want is a codebase similar to recent codebase or coins that they already have so that it's easier to integrate onto their systems. So, maybe, peercoin is not a good idea because, right now, not too many big and well-known exchanges enable you to trade peercoin. You might want to find out another PoS coin, probably based on peercoin, which it's more used.
+
+### Leveldb and memory
+
+What actually makes a coin is its blockchain. Currently the blockchain is being saved onto a leveldb database which with the current blockchain size is not suitable for a 1 GB device.
+So either something else like sqlite is used or the minimal requisites need to be something like 4 GiB or even 8 GiB of RAM.
+
+**You should also think about doing an snapshot so that balances are kept but all of the history is lost.**
+
+### Leveldb and forks
+
+What actually makes a coin is its blockchain. Currently the blockchain is being saved onto a leveldb database.
+Each one of the blocks define if they are either a PoS or a PoW block.
+
+So if you want to remove either PoS or PoW you would need to create a versions that supports both of them, then does not allow, let's say, PoW, and then later on it only supports PoS in a new version.
+
+This will also simplify the source code regarding how to deal with Leveldb.
+
+### About learning old code
+
+I think it's worth checking many of the forks mentioned here to see how they have evolved into the current days.
+E.g.: Is it Badgercoin maintained nowadays? Is it still PoS? And so on.
+
+- You could also check differences between the different peercoin big releases and try to apply that into the PoS part of Magi coin.
+- You could also check differences between the different Bitcoin big releases and try to apply that into the PoW part of Magi coin.
+
+- You could also use some of the comparison techniques used here to see what it's actually different in a recent peercoin version and Magi coin.
+
 ## Media
 
 This work (including the documentation part of this own repo) was recorded in a Youtube playlist which you can check: [https://www.youtube.com/watch?v=5OUoClM9VuE&list=PLUCT1oZWwYjyix7qikVAlkY1cJ2QcVxpB&index=1](https://www.youtube.com/watch?v=5OUoClM9VuE&list=PLUCT1oZWwYjyix7qikVAlkY1cJ2QcVxpB&index=1).
