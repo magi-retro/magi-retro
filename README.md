@@ -53,9 +53,30 @@ You could actually exchange or swap those old Magiccoin coins to Magi coins.
 ### Misc notes
 
 - POW_CUTOFF_HEIGHT is specific to X11Coin.
-- About changes to contrib/gitian-downloader/richardsmith-key.gpg .
-- dos2unix against comparisons.
 - Whitecoin. There is a Whitecoin project that forks from Blackcoin. And there is another Whitecoin project that from Ghostcoin. Magicoin fork history uses the Whitecoin project that has been forked from Ghostcoin.
+
+### gitian-downloader keys unveils changes
+
+Back in the day some coin developers used `sed` in order to change their ticker, the coin name and so on without knowning what they were doing.
+This has helped us to find out some ancestor repos to the ones we were studying.
+
+One clear example affects the `contrib/gitian-downloader/scottnadal-key.gpg` file.
+
+As you might now a gpg file is not supposed to be changed, either you change it completly or you don't.
+
+So... if there are two letters or three letters that change there you might find out that, yes, there has been a ticker change.
+Take a look at these two commits:
+
+- [WC gets changed onto BDG](https://github.com/magi-retro/peercoin/commit/98897226a1c37b22407c2a733707921970b9f5e7)
+- [BDG gets changed onto XC](https://github.com/magi-retro/peercoin/commit/da8975290b537f51c49b1bb9cf79fcdec525723b)
+
+### Dos2unix against comparisons
+
+When a file seems completly different than another one it's worth running `dos2unix` or `unix2dos` on it to see if it needs to be converted in order to find out what are the actual differences.
+
+### Renaming
+
+You might need to rename some files like `.pro` files in order to compare them properly. Otherwise you won't find the actual useful changes.
 
 ### Detect changes based on port
 
