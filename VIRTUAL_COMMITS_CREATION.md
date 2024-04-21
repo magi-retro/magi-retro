@@ -167,6 +167,46 @@ find -type f -name 'bitcoinstrings.cpp' -exec sed -i 's/rpcuser=bitcoinrpc/rpcus
 
 which was associated to the `x11coin-magi-fork-commit-candidate-1-replace-to-step1` branch.
 
-## MELD
+## Meld for detecting changes
 
-**TODO**
+Let's assume that we have selected two different candidates:
+
+- atcsecurex11coin-magi-WORK is a clone of atcsecurex11coin-magi **checked out at** the latest available commit (the tip) where we create a new branch like `MANUAL-FORK-PASTREPO-FUTUREREPO`.
+- magi is a clone of Magi repo **checked out at** the very first commit (which it's usually the `INITIAL_COMMIT_BRANCH` branch).
+
+We compare those two directories thanks to meld (which by default ignores .git directory).
+Then we just copy files which have interesting differences from Magi repo (future repo) to atcsecurex11coin-magi-WORK repo (past repo).
+
+Let's see an an actual example.
+
+- atcsecurex11coin-magi-WORK is found at: `~/github/magi-repos/atcsecurex11coin-magi-WORK/2015-06-22_18-53_x11coin`
+- magi is found at: `~/github/magi-repos/magi`
+
+You can run:
+
+```
+cd ~/github/magi-repos/atcsecurex11coin-magi-WORK/2015-06-22_18-53_x11coin # Past repo
+meld ~/github/magi-repos/magi/ ./ > /dev/null 2>&1 &disown
+```
+
+You will find on your left pane Magi commits (future repo) and on the right pane X11coin commits (past repo).
+Files that are different will be highlighted in blue.
+If you double-click a file you will find its specific differences.
+
+So you are encouraged to copy files from the left pane (future repo) to the right pane (past repo) thanks to the *Copy to the right* button.
+
+## git add -i for creating commits
+
+Once we have those files we can use: `git diff` on atcsecurex11coin-magi-WORK repo (past repo) to find out actual differences according to git.
+
+I recommend using `git add -i` in order to select which changes are useful for the different commits.
+
+You could use the different labels that have been discussed in the [VIRTUAL_COMMITS_INTRODUCTION.md][VIRTUAL_COMMITS_INTRODUCTION.md] as a reference about what a commit should have.
+
+## When not to add commits
+
+Once meld does not find any differences between past repo and future repo you can use other tools such as `diff -urN`, `kompare` and so on, probably removing temporarily the `.git` directory from both repos.
+
+This will ensure you that everything has been compared properly. Sometimes meld says that two files are the same ones even if their Line Ending characters are not the same ones.
+
+Either if you find any difference or not you should put the `.git` directories back to where they were.
