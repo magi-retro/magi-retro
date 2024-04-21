@@ -117,3 +117,7 @@ In the end we found out that **23489 port** was Badgercoin which was another for
 ## How to put all of the commits together
 
 - [VIRTUAL_COMMITS_FINAL_SQUASH.md](VIRTUAL_COMMITS_FINAL_SQUASH.md)
+
+## Media
+
+This work (including the documentation part of this own repo) was recorded in a Youtube playlist which you can check: [https://www.youtube.com/watch?v=5OUoClM9VuE&list=PLUCT1oZWwYjyix7qikVAlkY1cJ2QcVxpB&index=1](https://www.youtube.com/watch?v=5OUoClM9VuE&list=PLUCT1oZWwYjyix7qikVAlkY1cJ2QcVxpB&index=1).
